@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100vh; /* Quer dizer que irá utilizar a ALTURA total do navegador */
+    width: 100vw; /* Quer dizer que irá utilizar a LARGURA total do navegador */
+    background-color: black;
+}
+
+body {
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center; /* Aqui eu quis dizer que eu coloquei uma imagem, disse para que ela não se repita, e que ela se alinhamento será pelo topo e que será centralizado */
+
+    background-size: cover; /* Aqui eu quis dizer que a imagem deve cobrir a tela inteira */
+
+    background-attachment: fixed; /* Aqui ele deixará a imagem/fundo fixa para que não haja uma rolagem */
+}
+
+main {
+    position: relative; /* Precisa da position:relative; para meio que desbloquear ele para que nós conseguissimos mexer a caixa, como centralizar ele por exemplo, que é o que vou fazer no próximo passo */
+
+    height: 100vh; /* Isso quer dizer no tanto que o meu main (contéudo principal irá utilizar da tela do navegador. Se por exemplo, neste código, eu colocar o height:90vh, ele não irá utilizar todo, o body irá se sobressair por está no fundo */
+}
+
+section#telefone {
+    position: absolute; /* A partir disso, agr eu consigo centralizar, posso fazer o posicionamento absoluto, só que agr, além disso, é necessário configurar o top e o seu left utilizando 50%, aí a ponta da caixa ficará centralizado no meio, vou fazer isso aqui em baixo*/
+
+    top: 50%;
+    left: 50%; /* A partir de agora, eu irei puxar o bloco um pouco para a esquerda e para cima para centralizar definitivamente utilizando o transform: translate(-50%, -50%);*/
+
+    transform: translate(-50%, -50%); /* Aqui puxa -metade para a esquerda e -metade para cima*/
+
+
+
+
+    height: 627px;
+    width: 311px;
+    background:url('../imagens/frame-iphone.png') no-repeat; 
+    /*
+    Primeiro: Devemos usar o "background" apenas para colocar uma foto.
+
+    Segundo: Devemos colocar o no-repeat nas imagens para não se repetir.
+    */
+}
+
+iframe {
+    position: relative;
+    top: 80px; 
+    left: 22px;
+    /* 
+    Isso é o posicionamento do iframe. Tem que ir testando o top e o left a todo momento para posicionar certinho 
+    */
+
+    height: 471px;
+    width: 269px;
+}
